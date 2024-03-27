@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<!-- Copyright © Klevu Oy. All rights reserved. See LICENSE.txt for license details. -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Klevu\Registry\Api\CategoryRegistryInterface" type="Klevu\Registry\Registry\CategoryRegistry"/>
+    <preference for="Klevu\Registry\Api\OrderRegistryInterface" type="Klevu\Registry\Registry\OrderRegistry"/>
+    <preference for="Klevu\Registry\Api\ProductRegistryInterface" type="Klevu\Registry\Registry\ProductRegistry"/>
+
+    <type name="Magento\Sales\Controller\AbstractController\OrderLoader">
+        <plugin name="klevu_register_current_order" type="Klevu\Registry\Plugin\Sales\OrderLoader\RegisterCurrentOrderPlugin"/>
+    </type>
+</config>

@@ -1,0 +1,29 @@
+{
+    "name": "klevu/module-m2-registry",
+    "description": "Klevu Registry",
+    "type": "magento2-module",
+    "version": "0.1.0",
+    "require": {
+        "php": "~8.1.0|~8.2.0",
+        "magento/framework": "^103.0.4",
+        "magento/module-catalog": "^104.0.4"
+    },
+    "autoload": {
+        "files": [
+          "registration.php"
+        ],
+        "psr-4": {
+          "Klevu\\Registry\\": ""
+        }
+    },
+    "license": [
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "Klevu Oy",
+            "email": "niraj.aswani@klevu.com",
+            "homepage": "https://www.klevu.com/"
+        }
+    ]
+}
